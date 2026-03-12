@@ -1,132 +1,97 @@
-/* Color Palette & General Setup */
-:root {
-    /* Updated purple gradient from your requested theme */
-    --bg-gradient: linear-gradient(135deg, #3d1c5d 0%, #1a0a2e 100%);
-    --pearl-accent: #b388ff; /* A complementary light purple for accents */
-    --glass-bg: rgba(255, 255, 255, 0.05);
-}
-
 body {
     margin: 0;
     height: 100vh;
+    background-color: #224D9A; /* Official Pearl Blue */
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--bg-gradient);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
+    font-family: 'Segoe UI', sans-serif;
     overflow: hidden;
 }
 
-/* Glassmorphism Container */
+/* Animated SVG Styling from your source */
+#animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.out-top { animation: rotate 20s linear infinite; transform-origin: 13px 25px; }
+.in-top { animation: rotate 10s linear infinite; transform-origin: 13px 25px; }
+.out-bottom { animation: rotate 25s linear infinite; transform-origin: 84px 93px; }
+.in-bottom { animation: rotate 15s linear infinite; transform-origin: 15s linear infinite; transform-origin: 84px 93px; }
+
+@keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
 .glass-container {
-    width: 90%;
-    max-width: 1400px;
-    height: 85vh;
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    border-radius: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 50px;
+    width: 85%;
+    height: 80vh;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
-    flex-direction: column;
+    padding: 40px;
 }
 
-/* Navigation */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    opacity: 0.8;
-}
-
-.sign-out {
-    background: rgba(255,255,255,0.1);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    color: white;
-    cursor: pointer;
-}
-
-/* Main Grid Layout */
 .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    height: 100%;
+    width: 100%;
 }
 
-/* Right Panel: Login & Info */
+.clothing-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 20px;
+}
+
 .info-panel {
+    padding-left: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* Clothing Image: Set to fit the space nicely */
-.visual-rack {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.main-logo { width: 200px; margin-bottom: 30px; }
 
-.clothing-image {
-    max-width: 100%;
-    max-height: 80%;
-    border-radius: 20px;
-}
-
-/* Login Form Styling */
-.login-box {
-    margin: 40px 0;
-    max-width: 400px;
-}
-
-.input-group label {
-    display: block;
-    font-size: 0.8rem;
-    color: #ccc;
-    margin-bottom: 8px;
-}
-
+.input-group label { display: block; color: white; margin-bottom: 8px; font-size: 0.9rem; }
 .input-group input {
     width: 100%;
-    padding: 15px;
+    padding: 12px;
     margin-bottom: 20px;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
     color: white;
 }
 
-.login-btn {
-    background: #8a2be2; /* Classic purple accent */
+.submit-btn {
+    background: #027A48; /* Official Pearl Green */
+    color: white;
     border: none;
     padding: 12px 30px;
     border-radius: 5px;
-    color: white;
-    font-weight: bold;
     cursor: pointer;
+    font-weight: bold;
 }
 
-/* Categories */
-.categories {
+.bottom-nav {
+    margin-top: 40px;
     display: flex;
-    gap: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-.cat-card {
-    background: rgba(255,255,255,0.1);
-    padding: 15px;
-    border-radius: 10px;
-    flex: 1;
-    text-align: center;
+.nav-btn {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid white;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
 }
