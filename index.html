@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acme Corp. Employee Portal</title>
+    <title>Pearl Global - Employee Portal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
             <ul class="nav-links">
                 <li>Dashboard</li>
                 <li>My Benefits</li>
-                <li>Payroll</li>
+                <li>Payroll & HR</li>
                 <li>IT Support</li>
             </ul>
             <button class="sign-out">SIGN OUT</button>
@@ -21,30 +21,34 @@
 
         <main class="content">
             <section class="visual-rack">
-                <div class="rack-frame"></div>
-                <div class="clothes">
-                    <div class="item coat"></div>
-                    <div class="item shirt-blue"></div>
-                    <div class="item shirt-maroon"></div>
-                </div>
+                <img src="image_4.png" alt="Company Uniform Rack" class="clothing-image">
             </section>
 
             <section class="info-panel">
-                <div class="text-content">
-                    <h1>Employee Handbook</h1>
-                    <p>Access your comprehensive guide to Acme Corp's policies and benefits. Stay informed about everything you need for a successful career.</p>
+                <div class="header">
+                    <h2>Employee Portal</h2>
+                    <p>Enter your credentials to access company resources.</p>
                 </div>
+
+                <form class="login-box">
+                    <div class="input-group">
+                        <label for="username">USERNAME or EMAIL</label>
+                        <input type="text" id="username" placeholder="john.doe@company.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="login-footer">
+                        <button type="submit" class="login-btn">LOG IN</button>
+                        <a href="https://pearlglobalcentral.com/password/reset" class="forgot" target="_blank">Forgot Password?</a>
+                    </div>
+                </form>
 
                 <div class="categories">
-                    <div class="cat-card"><span>Dress Code</span></div>
-                    <div class="cat-card"><span>Conduct</span></div>
-                    <div class="cat-card"><span>Benefits</span></div>
-                </div>
-
-                <div class="contacts-grid">
-                    <div class="contact-card">HR Contact</div>
-                    <div class="contact-card">IT Helpdesk</div>
-                    <div class="contact-card">Facilities</div>
+                    <div class="cat-card">Dress Code</div>
+                    <div class="cat-card">Conduct</div>
+                    <div class="cat-card">Benefits</div>
                 </div>
             </section>
         </main>
