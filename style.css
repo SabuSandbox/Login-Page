@@ -1,0 +1,84 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #4b306a 0%, #2e1a47 100%);
+    --accent-purple: #8a6fb3;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-gradient);
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+.glass-container {
+    width: 90%;
+    height: 85vh;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    height: 100%;
+}
+
+/* Simulated Rack Visual */
+.visual-rack {
+    position: relative;
+    background: rgba(0,0,0,0.2);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.clothes {
+    display: flex;
+    gap: -20px;
+}
+
+.item {
+    width: 120px;
+    height: 350px;
+    background: #5a3d2b;
+    border-radius: 10px 10px 0 0;
+    margin-right: -40px;
+    border: 1px solid rgba(0,0,0,0.3);
+    box-shadow: 10px 0 20px rgba(0,0,0,0.3);
+}
+
+.cat-card, .contact-card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.cat-card:hover { background: var(--accent-purple); }
