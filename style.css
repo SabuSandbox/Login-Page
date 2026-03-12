@@ -1,6 +1,9 @@
+/* Color Palette & General Setup */
 :root {
-    --bg-gradient: linear-gradient(135deg, #4b306a 0%, #2e1a47 100%);
-    --accent-purple: #8a6fb3;
+    /* Updated purple gradient from your requested theme */
+    --bg-gradient: linear-gradient(135deg, #3d1c5d 0%, #1a0a2e 100%);
+    --pearl-accent: #b388ff; /* A complementary light purple for accents */
+    --glass-bg: rgba(255, 255, 255, 0.05);
 }
 
 body {
@@ -10,75 +13,120 @@ body {
     justify-content: center;
     align-items: center;
     background: var(--bg-gradient);
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     overflow: hidden;
 }
 
+/* Glassmorphism Container */
 .glass-container {
     width: 90%;
+    max-width: 1400px;
     height: 85vh;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(15px);
-    border-radius: 30px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 40px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
 }
 
+/* Navigation */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .nav-links {
-    display: flex;
     list-style: none;
+    display: flex;
     gap: 30px;
-    font-size: 0.9rem;
     opacity: 0.8;
 }
 
+.sign-out {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Main Grid Layout */
 .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 60px;
     height: 100%;
 }
 
-/* Simulated Rack Visual */
+/* Right Panel: Login & Info */
+.info-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Clothing Image: Set to fit the space nicely */
 .visual-rack {
-    position: relative;
-    background: rgba(0,0,0,0.2);
-    border-radius: 20px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
 
-.clothes {
+.clothing-image {
+    max-width: 100%;
+    max-height: 80%;
+    border-radius: 20px;
+}
+
+/* Login Form Styling */
+.login-box {
+    margin: 40px 0;
+    max-width: 400px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.8rem;
+    color: #ccc;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    color: white;
+}
+
+.login-btn {
+    background: #8a2be2; /* Classic purple accent */
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Categories */
+.categories {
     display: flex;
-    gap: -20px;
+    gap: 20px;
 }
 
-.item {
-    width: 120px;
-    height: 350px;
-    background: #5a3d2b;
-    border-radius: 10px 10px 0 0;
-    margin-right: -40px;
-    border: 1px solid rgba(0,0,0,0.3);
-    box-shadow: 10px 0 20px rgba(0,0,0,0.3);
-}
-
-.cat-card, .contact-card {
+.cat-card {
     background: rgba(255,255,255,0.1);
-    padding: 20px;
-    border-radius: 15px;
-    transition: transform 0.3s;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
 }
-
-.cat-card:hover { background: var(--accent-purple); }
