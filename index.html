@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pearl Global - Employee Portal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="2wuw_C-W7V-fJXHsQ1l5PO1AyptYGV1HmYSGNsEV6kOicvS_SbuXDdtcQtR7OxRKpimTw2pqGh_c3upjqziiNg==">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,40 +17,40 @@
     </svg>
 
     <div class="glass-container">
-        <header class="top-header">
-            <img src="Pearl_logo_HD.png" class="hd-logo" alt="Pearl Global">
-        </header>
-
         <main class="content">
             <section class="visual-panel">
-                <img src="Pearl-Global-posts-Rs-37.11-billion-revenue-in-9M-FY26-on-global-scale.png" class="brand-image">
+                <img src="Pearl-Global-posts-Rs-37.11-billion-revenue-in-9M-FY26-on-global-scale.png" class="brand-image" alt="Pearl Global Growth">
+                <div class="stats-overlay">
+                    <h3>Leading Clothing Supplier</h3>
+                    <p>Multinational apparel manufacturer with a global footprint.</p>
+                </div>
             </section>
 
-            <section class="login-section">
+            <section class="info-panel">
+                <img src="https://pearlglobalcentral.com/app-assets/pearl-global/images/logo_main.png" class="main-logo" alt="Pearl Global Logo">
+                
                 <form id="w0" class="login-form" action="https://pearlglobalcentral.com/user/login" method="post">
                     <input type="hidden" name="_csrf" value="2wuw_C-W7V-fJXHsQ1l5PO1AyptYGV1HmYSGNsEV6kOicvS_SbuXDdtcQtR7OxRKpimTw2pqGh_c3upjqziiNg==">
-                    
                     <div class="input-group">
                         <label>Username</label>
-                        <input type="text" name="LoginForm[email_id]" placeholder="Username" required>
+                        <input type="text" name="LoginForm[email_id]" placeholder="Enter Your Username" required>
                     </div>
-                    
                     <div class="input-group">
                         <label>Password</label>
-                        <input type="password" name="LoginForm[password]" placeholder="Password" required>
+                        <input type="password" name="LoginForm[password]" placeholder="Enter Your Password" required>
                     </div>
-
-                    <div class="login-actions">
+                    <div class="login-footer">
                         <button type="submit" class="submit-btn">SIGN IN</button>
-                        <a href="#" class="forgot">Forgot Password?</a>
+                        <a href="https://pearlglobalcentral.com/user/forgot-password" class="forgot">Forgot Password?</a>
                     </div>
                 </form>
 
                 <div class="bottom-nav">
-                    <button class="nav-btn"></button>
-                    <button class="nav-btn"></button>
-                    <button class="nav-btn"></button>
-                    <button class="nav-btn"></button>
+                    <button class="nav-btn">Supply Chain</button>
+                    <button class="nav-btn">Sustainability</button>
+                    <button class="nav-btn">Our Presence</button>
+                    <button class="nav-btn">Investors</button>
+                    <button class="nav-btn">Careers</button>
                 </div>
             </section>
         </main>
