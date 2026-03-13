@@ -1,6 +1,7 @@
 :root {
     --pearl-blue: #224D9A;
     --pearl-green: #027A48;
+    --soft-white: rgba(255, 255, 255, 0.85);
 }
 
 body {
@@ -10,102 +11,103 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Arial', sans-serif;
+    /* Softer Typography */
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.01em;
     overflow: hidden;
 }
 
-#animated-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
-}
+/* Animated SVG styling remains the same as previous step */
 
-/* Glassmorphism Effect */
 .glass-container {
-    width: 85%;
-    max-width: 1200px;
-    height: 75vh;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    border-radius: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 90%;
+    max-width: 1100px;
+    height: 80vh;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(25px);
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     display: flex;
-    overflow: hidden;
+    flex-direction: column;
+    padding: 30px;
+}
+
+/* Logo at Top Center */
+.top-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.hd-logo {
+    width: 220px;
+    height: auto;
 }
 
 .content {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    flex-grow: 1;
 }
 
-.visual-panel {
-    background: rgba(0,0,0,0.2);
+/* Center-aligned login section */
+.login-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    text-align: center;
+    justify-content: center; /* Move fields up to center */
+    padding: 0 50px;
 }
 
-.brand-image {
-    max-width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+.input-group label {
+    color: var(--soft-white);
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    display: block;
 }
 
-.stats-overlay h3 { margin-top: 20px; color: var(--pearl-green); }
-
-.info-panel {
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.main-logo { width: 180px; margin-bottom: 40px; }
-
-.input-group label { display: block; color: white; margin-bottom: 5px; font-size: 0.8rem; }
 .input-group input {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 5px;
+    padding: 14px;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
     color: white;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--pearl-green);
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .submit-btn {
     background: var(--pearl-green);
     color: white;
     border: none;
-    padding: 12px 30px;
-    border-radius: 4px;
+    padding: 14px 40px;
+    border-radius: 8px;
+    font-weight: 500;
     cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(2, 122, 72, 0.3);
 }
 
-.submit-btn:hover { background: #015e37; }
-
 .bottom-nav {
-    margin-top: 40px;
+    margin-top: 50px;
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .nav-btn {
     background: transparent;
-    border: 1px solid white;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: var(--soft-white);
+    padding: 8px 15px;
+    border-radius: 25px;
     font-size: 0.75rem;
     cursor: pointer;
 }
