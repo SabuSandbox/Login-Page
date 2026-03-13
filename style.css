@@ -1,15 +1,19 @@
+:root {
+    --pearl-blue: #224D9A;
+    --pearl-green: #027A48;
+}
+
 body {
     margin: 0;
     height: 100vh;
-    background-color: #224D9A; /* Official Pearl Blue */
+    background-color: var(--pearl-blue);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Arial', sans-serif;
     overflow: hidden;
 }
 
-/* Animated SVG Styling from your source */
 #animated-bg {
     position: fixed;
     top: 0;
@@ -19,65 +23,75 @@ body {
     z-index: -1;
 }
 
-.out-top { animation: rotate 20s linear infinite; transform-origin: 13px 25px; }
-.in-top { animation: rotate 10s linear infinite; transform-origin: 13px 25px; }
-.out-bottom { animation: rotate 25s linear infinite; transform-origin: 84px 93px; }
-.in-bottom { animation: rotate 15s linear infinite; transform-origin: 15s linear infinite; transform-origin: 84px 93px; }
-
-@keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-
+/* Glassmorphism Effect */
 .glass-container {
     width: 85%;
-    height: 80vh;
+    max-width: 1200px;
+    height: 75vh;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(25px);
-    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
-    padding: 40px;
+    overflow: hidden;
 }
 
 .content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.2fr;
     width: 100%;
 }
 
-.clothing-image {
-    max-width: 90%;
-    height: auto;
-    border-radius: 20px;
+.visual-panel {
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
 }
 
+.brand-image {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.stats-overlay h3 { margin-top: 20px; color: var(--pearl-green); }
+
 .info-panel {
-    padding-left: 50px;
+    padding: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.main-logo { width: 200px; margin-bottom: 30px; }
+.main-logo { width: 180px; margin-bottom: 40px; }
 
-.input-group label { display: block; color: white; margin-bottom: 8px; font-size: 0.9rem; }
+.input-group label { display: block; color: white; margin-bottom: 5px; font-size: 0.8rem; }
 .input-group input {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.2);
     border-radius: 5px;
     color: white;
 }
 
 .submit-btn {
-    background: #027A48; /* Official Pearl Green */
+    background: var(--pearl-green);
     color: white;
     border: none;
     padding: 12px 30px;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+    transition: 0.3s;
 }
+
+.submit-btn:hover { background: #015e37; }
 
 .bottom-nav {
     margin-top: 40px;
@@ -87,11 +101,11 @@ body {
 }
 
 .nav-btn {
-    background: rgba(255,255,255,0.05);
+    background: transparent;
     border: 1px solid white;
     color: white;
-    padding: 8px 12px;
+    padding: 6px 12px;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     cursor: pointer;
 }
